@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>David Newcomb</title>
+        <%= stylesheet_link_tag  'application', media: 'all'%>
+        <%= javascript_include_tag 'application' %>
+	    <%= csrf_meta_tags %>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Link to Open Sans-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        
+         <!-- JQuery Plugin -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+
+	    <!-- Latest compiled and minified Bootstrap JavaScript -->
+  	    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  	    <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    </head>
+	<body>
+		<header>
+            <nav class="navbar navbar-fixed-top" id="nav-bar-container">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                      <div class="brand">DN</div>
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dirk">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="dirk">
+                        <ul class="nav navbar-nav">
+                            <li class="brand-spacer">
+                                <a href="#top" class="return-top"></a>
+                            </li>
+                            <li class="menu-tab">
+                                <a href="#about" class="active-a">
+                                    About Me
+                                </a>
+                            </li>
+                            <li class="menu-tab">
+                                <a href="#coursework" class="active-a">
+                                    Coursework
+                                </a>
+                            </li>
+                            <li class="menu-tab">
+                                <a href="#projects" class="active-a">
+                                    Projects
+                                </a>
+                            </li>
+                            <li class="menu-tab">
+                                <a href="#contact" class="active-a">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+		<%= yield %>
+    </body>
+</html>
