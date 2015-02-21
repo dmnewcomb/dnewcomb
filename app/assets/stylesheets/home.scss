@@ -186,7 +186,13 @@ body {
     background-position: 70%;
 }
 
-.fourth-background {
+.fourth-background-image {
+    @extend .top-background-image;
+    background-image: url("climb-long.jpg");
+    background-position: 70%;
+}
+
+.fifth-background {
     width: 100%;
     background-color: white;
     min-height: 200px;
@@ -295,4 +301,21 @@ body {
     a:hover #resume {
         background-image: url("file-highlighted.png");
     }
+}
+
+.company-logo {
+    margin: 10px auto;
+    display: block;
+    background-size: cover;
+    height: 64px;
+    width: 64px;
+    background-repeat: no-repeat;
+}
+
+#txu {
+    background-image: url();
+}
+
+#samsung {
+    background-image: url("samsung.jpg");
 }
