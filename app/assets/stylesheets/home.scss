@@ -130,6 +130,10 @@ body {
         height: auto !important;
     }
     
+    .navbar-nav:hover {
+        border-right: 0px !important;
+    }
+    
     .menu-tab > a {
         text-align: center;
     }
