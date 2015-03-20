@@ -14,9 +14,12 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+#  Allows for easy creation of highcharts
 gem 'lazy_high_charts'
-
 gem 'highcharts-rails'
+
+# New Relic monitoring app
+gem 'newrelic_rpm'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
