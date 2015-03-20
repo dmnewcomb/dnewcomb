@@ -67,8 +67,8 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = 'http://assets.example.com'
+  # Enable serving of images, stylesheets, and JavaScripts from AWS Cloudfront server.
+  config.action_controller.asset_host = 'http://d3idojrwqzsmhm.cloudfront.net'
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
