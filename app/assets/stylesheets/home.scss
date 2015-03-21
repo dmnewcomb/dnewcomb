@@ -22,17 +22,19 @@ body {
     font-family: $primary-font;
 }
 
-.top-nav-collapse #dirk {
-    .menu-tab {
-        display: inline;    
-    }
-    
-    .brand {
-        border-right: 1px solid white;
-    }
-    
-    .navbar-nav {
-        border-right: 1px solid $highlight-color-non-important;  
+@media(min-width: 767px) {
+    .top-nav-collapse #dirk {
+        .menu-tab {
+            display: inline;    
+        }
+
+        .brand {
+            border-right: 1px solid white;
+        }
+
+        .navbar-nav {
+            border-right: 1px solid $highlight-color-non-important;  
+        }
     }
 }
 

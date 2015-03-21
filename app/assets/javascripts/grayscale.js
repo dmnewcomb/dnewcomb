@@ -6,18 +6,20 @@
 // jQuery to collapse the navbar on scroll
 var check = true;
 $(window).scroll(function() {
-    if ($(".navbar").offset().top < 200 && check === false) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-        $("#dirk").addClass("fadeIn");
-        $("#dirk").removeClass("fadeOut");
-        check = true;
-    } else if ($(".navbar").offset().top > 200 && check === true) {
-        $("#dirk").removeClass("fadeIn");
-        $("#dirk").addClass("fadeOut");
-        check = false;
-    } else if($(".navbar").offset().top > 275 && check === false) {
-        $("#dirk").removeClass("fadeOut");
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");  
+    if($(".navbar").width() > 767) {
+        if ($(".navbar").offset().top < 200 && check === false) {
+            $(".navbar-fixed-top").addClass("top-nav-collapse");
+            $("#dirk").addClass("fadeIn");
+            $("#dirk").removeClass("fadeOut");
+            check = true;
+        } else if ($(".navbar").offset().top > 200 && check === true) {
+            $("#dirk").removeClass("fadeIn");
+            $("#dirk").addClass("fadeOut");
+            check = false;
+        } else if($(".navbar").offset().top > 275 && check === false) {
+            $("#dirk").removeClass("fadeOut");
+            $(".navbar-fixed-top").removeClass("top-nav-collapse");  
+        }
     }
 });
 
