@@ -3185,3 +3185,423 @@ Copyright (c) 2015 Daniel Eden
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+/* line 19, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+body {
+  background-color: #f0f0f0 !important;
+  font-size: 12px;
+  font-family: Open Sans !important;
+}
+
+/* line 26, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.top-nav-collapse #dirk .menu-tab {
+  display: inline;
+}
+/* line 30, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.top-nav-collapse #dirk .brand, .top-nav-collapse #dirk .brand-spacer {
+  border-right: 1px solid white;
+}
+/* line 34, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.top-nav-collapse #dirk .navbar-nav {
+  border-right: 1px solid #891414;
+}
+
+/* line 39, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.navbar-collapse {
+  border-top: #891414 !important;
+}
+
+/* line 43, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.brand, .brand-spacer {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  text-align: center;
+  font-size: 3.5em;
+  line-height: 100px;
+  position: absolute;
+  border-bottom: 1px solid #891414;
+}
+
+/* line 54, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.brand-spacer {
+  background-color: inherit;
+}
+
+/* line 60, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#nav-bar-container .container-fluid {
+  padding: 0px !important;
+}
+
+/* line 66, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#dirk .brand, #dirk .brand-spacer {
+  border-right: 1px solid #891414;
+}
+/* line 70, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#dirk .navbar-nav {
+  height: 100px;
+  z-index: 1000;
+}
+/* line 75, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#dirk .navbar-nav:hover {
+  cursor: pointer;
+  border-right: 1px solid #891414;
+}
+/* line 80, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#dirk .navbar-nav:hover .menu-tab {
+  cursor: pointer;
+  display: inline;
+}
+/* line 85, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#dirk .menu-tab {
+  display: none;
+  background-color: #f0f0f0 !important;
+  padding: 24.5px;
+  border-bottom: 1px solid #891414;
+}
+/* line 93, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#dirk .return-top {
+  height: 100%;
+  background-color: transparent;
+}
+/* line 98, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#dirk .menu-tab > a {
+  color: #333 !important;
+  -webkit-transition: color, ease-in 0.5s;
+  -moz-transition: color, ease-in 0.5s;
+  -o-transition: color, ease-in 0.5s;
+  transition: color, ease-in 0.5s;
+}
+/* line 106, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#dirk .menu-tab > a:hover {
+  color: #891414 !important;
+  background-color: inherit !important;
+}
+
+@media (max-width: 767px) {
+  /* line 113, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .navbar-header {
+    background-color: #f0f0f0 !important;
+  }
+
+  /* line 117, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .brand, .brand-spacer {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 1.75em !important;
+    line-height: 50px !important;
+    margin-left: 15px;
+    border: 0px !important;
+  }
+
+  /* line 126, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .menu-tab {
+    border-bottom: 0px !important;
+  }
+
+  /* line 130, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .navbar-toggle {
+    margin-right: 35px !important;
+  }
+
+  /* line 133, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .icon-bar {
+    background-color: #333 !important;
+  }
+
+  /* line 137, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .brand-spacer {
+    display: none !important;
+  }
+
+  /* line 141, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .menu-tab {
+    display: block !important;
+    padding: 0px !important;
+    border-bottom: 0px !important;
+  }
+
+  /* line 147, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .navbar {
+    border-bottom: 1px solid #891414 !important;
+  }
+
+  /* line 151, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .navbar-nav {
+    margin: 0px !important;
+    height: auto !important;
+  }
+
+  /* line 156, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .navbar-nav:hover {
+    border-right: 0px !important;
+  }
+
+  /* line 160, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .menu-tab > a {
+    text-align: center;
+  }
+
+  /* line 164, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  #top {
+    display: none;
+  }
+
+  /* line 168, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .top-background-image, .second-background-image, .third-background-image, .fourth-background-image {
+    height: 250px !important;
+  }
+
+  /* line 172, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .push-large {
+    padding: 20px 0px !important;
+  }
+
+  /* line 176, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+  .skew_appended, .skew_prepend {
+    height: 80px;
+  }
+}
+/* line 181, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.top-background-image, .second-background-image, .third-background-image, .fourth-background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+/* line 188, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.profile-picture {
+  display: block;
+  margin: 10px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 1px solid #333 !important;
+  background-size: cover;
+  background-image: url("profile.jpg");
+  background-repeat: no-repeat;
+}
+
+/* line 200, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.line-separator {
+  background-color: #891414 !important;
+  width: 50%;
+  max-width: 600px;
+  height: 1px;
+  margin: 5px auto;
+}
+
+/* line 208, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.top-background-image, .second-background-image, .third-background-image, .fourth-background-image {
+  background-image: url("basketball.jpg");
+}
+
+/* line 213, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.second-background-image {
+  background-image: url("forest.jpg");
+  opacity: 0.5;
+}
+
+/* line 219, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.third-background-image {
+  background-image: url("ocean.jpg");
+  background-position: 70%;
+  opacity: 0.5;
+}
+
+/* line 226, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.fourth-background-image {
+  background-image: url("climb-long.jpg");
+  background-position: 70%;
+  opacity: 0.5;
+}
+
+/* line 233, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.fifth-background {
+  width: 100%;
+  background-color: white;
+  min-height: 200px;
+}
+
+/* line 239, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.remaining {
+  position: relative;
+}
+
+/* line 243, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.no-margin-top {
+  margin-top: 0px !important;
+}
+
+/* line 247, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.push-large {
+  padding: 30px 0px;
+}
+
+/* line 251, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.push-small {
+  padding: 15px 0px;
+}
+
+/* line 255, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.text-centered {
+  text-align: center;
+}
+
+/* line 259, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.secondary-text-color {
+  color: #525252 !important;
+}
+
+/* line 263, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.link-text-color {
+  color: #891414 !important;
+}
+
+/*media all*/
+/* line 268, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.skew_appended, .skew_prepend {
+  background-color: #f0f0f0 !important;
+  height: 100px;
+  bottom: -51px;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  overflow: hidden;
+  -webkit-transform: skewY(-2.5deg);
+  transform: skewY(-2.5deg);
+  -webkit-backface-visibility: hidden !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  z-index: 1;
+}
+
+/* line 284, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.skew_prepend {
+  -webkit-transform: skewY(2.5deg);
+  transform: skewY(2.5deg);
+}
+
+/* line 290, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.class-container {
+  background-color: white;
+  border: 1px solid white;
+  padding: 20px;
+}
+
+/* line 296, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.class-container:hover {
+  border: 1px solid #891414 !important;
+}
+
+/* line 300, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.class-description {
+  color: #525252 !important;
+}
+
+/* line 304, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.logo {
+  display: block;
+  position: relative;
+  margin: 10px auto;
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* line 314, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#linkedin {
+  background-image: url("linkedin.png");
+  display: inherit;
+}
+
+/* line 319, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#linkedin-secondary-color {
+  background-image: url("linkedin-highlighted.png");
+  display: none;
+}
+
+/* line 325, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.linkedin-container a {
+  display: block;
+  background-color: transparent !important;
+  width: 100%;
+  height: 100%;
+}
+/* line 332, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.linkedin-container a:hover #linkedin {
+  display: none;
+}
+/* line 335, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.linkedin-container a:hover #linkedin-secondary-color {
+  display: inherit;
+}
+
+/* line 340, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#resume {
+  background-image: url("file.png");
+  display: inherit;
+}
+
+/* line 345, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#resume-secondary-color {
+  background-image: url("file-highlighted.png");
+  display: none;
+}
+
+/* line 351, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.resume-container a {
+  display: block;
+  background-color: transparent !important;
+  width: 100%;
+  height: 100%;
+}
+/* line 358, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.resume-container a:hover #resume {
+  display: none;
+}
+/* line 362, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.resume-container a:hover #resume-secondary-color {
+  display: inherit;
+}
+
+/* line 367, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+.company-logo {
+  margin: 10px auto;
+  display: block;
+  background-size: cover;
+  height: 64px;
+  width: 64px;
+  background-repeat: no-repeat;
+}
+
+/* line 376, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#txu {
+  background-image: url();
+}
+
+/* line 380, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+#samsung {
+  background-image: url("samsung.jpg");
+}
+
+/* line 384, C:/Users/John/Desktop/Local Repos/dnewcomb/app/assets/stylesheets/home.scss */
+a {
+  outline: inherit !important;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ */
+

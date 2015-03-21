@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$primary-font: Open Sans !important;
 $primary-body-color: #333 !important;
 $secondary-body-color: #525252 !important;
 $highlight-font-color: #891414 !important;
@@ -18,10 +19,25 @@ $max-separator-width: 600px;
 body {
     background-color: $primary-background-color;
     font-size: $base-font-size;
+    font-family: $primary-font;
 }
 
-.top-nav-collapse {
+.top-nav-collapse #dirk {
+    .menu-tab {
+        display: inline;    
+    }
     
+    .brand {
+        border-right: 1px solid white;
+    }
+    
+    .navbar-nav {
+        border-right: 1px solid $highlight-color-non-important;  
+    }
+}
+
+.navbar-collapse {
+    border-top: $highlight-font-color;
 }
 
 .brand {
@@ -32,7 +48,6 @@ body {
     font-size:  $large-font-size;
     line-height: $brand-size;
     position: absolute;
-    border-right: 1px solid $highlight-color-non-important;
     border-bottom: 1px solid $highlight-color-non-important;
 }
 
@@ -48,6 +63,10 @@ body {
 }
 
 #dirk {
+    .brand {
+        border-right: 1px solid $highlight-color-non-important;
+    }
+    
     .navbar-nav {
         height: $header-height;
         z-index: $important-z-index;
@@ -55,7 +74,7 @@ body {
     
     .navbar-nav:hover {
         cursor: pointer;
-        border-right: 1px solid $highlight-font-color;
+        border-right: 1px solid $highlight-color-non-important;
     }
     
     .navbar-nav:hover .menu-tab {
@@ -194,18 +213,21 @@ body {
 .second-background-image {
     @extend .top-background-image;
     background-image: url("forest.jpg");
+    opacity: 0.5;
 }
 
 .third-background-image {
     @extend .top-background-image;
     background-image: url("ocean.jpg");
     background-position: 70%;
+    opacity: 0.5;
 }
 
 .fourth-background-image {
     @extend .top-background-image;
     background-image: url("climb-long.jpg");
     background-position: 70%;
+    opacity: 0.5;
 }
 
 .fifth-background {
@@ -291,6 +313,12 @@ body {
 
 #linkedin {
     background-image: url("linkedin.png");
+    display: inherit;
+}
+
+#linkedin-secondary-color {
+    background-image: url("linkedin-highlighted.png");
+    display: none;
 }
 
 .linkedin-container {
@@ -302,12 +330,21 @@ body {
     }
     
     a:hover #linkedin {
-        background-image: url("linkedin-highlighted.png");
+        display: none;
+    }
+    a:hover #linkedin-secondary-color {
+        display: inherit;
     }
 }
 
 #resume {
     background-image: url("file.png");
+    display: inherit;
+}
+
+#resume-secondary-color {
+    background-image: url("file-highlighted.png");
+    display: none;
 }
 
 .resume-container {
@@ -319,7 +356,11 @@ body {
     }
     
     a:hover #resume {
-        background-image: url("file-highlighted.png");
+        display: none;
+    }
+    
+    a:hover #resume-secondary-color {
+        display: inherit;
     }
 }
 
@@ -338,4 +379,8 @@ body {
 
 #samsung {
     background-image: url("samsung.jpg");
+}
+
+a {
+    outline: inherit !important;
 }

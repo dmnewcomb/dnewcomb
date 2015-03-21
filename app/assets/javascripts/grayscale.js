@@ -4,11 +4,44 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 // jQuery to collapse the navbar on scroll
+var check = true;
 $(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
+    if ($(".navbar").offset().top < 200 && check === false) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        $("#dirk").addClass("fadeIn");
+        $("#dirk").removeClass("fadeOut");
+        check = true;
+    } else if ($(".navbar").offset().top > 200 && check === true) {
+        $("#dirk").removeClass("fadeIn");
+        $("#dirk").addClass("fadeOut");
+        check = false;
+    } else if($(".navbar").offset().top > 275 && check === false) {
+        $("#dirk").removeClass("fadeOut");
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");  
+    }
+});
+
+var check_one = false;
+$(window).scroll(function() {
+    if ($(".navbar").offset().top > 300 && check_one  === false) {
+        $(".second-background-image").addClass("animate fadeIn");
+        check_one = true;
+    }
+});
+
+var check_two = false;
+$(window).scroll(function() {
+    if ($(".navbar").offset().top > 1250 && check_two === false) {
+        $(".third-background-image").addClass("animate fadeIn");
+        check_two = true;
+    }
+});
+
+var check_three = false;
+$(window).scroll(function() {
+    if ($(".navbar").offset().top > 2250 && check_three === false) {
+        $(".fourth-background-image").addClass("animate fadeIn");
+        check_three = true;
     }
 });
 
