@@ -53,5 +53,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-    resources :home
+    resources :home do
+        get :switch, on: :collection
+    end
 end

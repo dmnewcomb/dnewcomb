@@ -167,12 +167,10 @@
 <div class="push-large"></div>
 <div class="container" id="projects">
     <h2 class="text-centered">Projects</h2>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam at laoreet arcu. Fusce eu tortor ut ante efficitur hendrerit at vel felis. Etiam ut eleifend urna. Morbi venenatis porttitor mattis. Morbi non lectus et tortor tempor laoreet. Sed blandit mauris at lectus sagittis, et iaculis quam vulputate. Nulla cursus nisi congue augue eleifend, quis venenatis leo efficitur.</p>
-    <%= high_chart("chart_1", @chart) %>
-    <div class="push-large"></div>
     <h3>NBA Playoff Predictions</h3>
     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam at laoreet arcu. Fusce eu tortor ut ante efficitur hendrerit at vel felis. Etiam ut eleifend urna. Morbi venenatis porttitor mattis. Morbi non lectus et tortor tempor laoreet. Sed blandit mauris at lectus sagittis, et iaculis quam vulputate. Nulla cursus nisi congue augue eleifend, quis venenatis leo efficitur.</p>
-    <%= high_chart("chart_2", @chart) %>
+    
+    <%= render(:partial => "drop") %>    
 </div>
 <div class="push-large"></div>
 <div class="push-large"></div>
@@ -207,3 +205,15 @@
     <div class="push-small"></div>
 </div>
 
+<script type="text/javascript">
+    //<![CDATA[
+    $("#zoom_img").elevateZoom({ 
+        zoomWindowFadeIn: 500,
+        zoomWindowFadeOut: 500,
+        zoomWindowWidth:500, 
+        zoomWindowHeight:500,
+        lensFadeIn: 500,
+        lensFadeOut: 500 
+    });
+    //]]>
+</script>
