@@ -393,3 +393,15 @@ a {
     display: block;
     margin: 10px auto;
 }
+
+#drop {
+    margin: 10px auto;
+    display: block;
+    color: black;
+}
+
+.dropdown-container {
+    color: $highlight-color-non-important;
+    background-color: white;
+    padding: 15px;
+}
