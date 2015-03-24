@@ -85,6 +85,7 @@ body {
     }
     
     .menu-tab {
+        margin: 0px -1px;
         display: none;
         background-color: $primary-background-color;
         padding: ($header-height - 2)/4;
@@ -392,15 +393,15 @@ a {
     height: 500px;
     display: block;
     margin: 10px auto;
+    border-radius: 15px;
 }
 
-#drop {
+#drop-container {
+    width: 220px;
     margin: 10px auto;
-    display: block;
-    color: black;
 }
 
-.dropdown-container {
+.team-img-container {
     color: $highlight-color-non-important;
     background-color: white;
     padding: 15px;

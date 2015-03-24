@@ -207,13 +207,15 @@
 
 <script type="text/javascript">
     //<![CDATA[
-    $("#zoom_img").elevateZoom({ 
-        zoomWindowFadeIn: 500,
-        zoomWindowFadeOut: 500,
-        zoomWindowWidth:500, 
-        zoomWindowHeight:500,
-        lensFadeIn: 500,
-        lensFadeOut: 500 
-    });
+    if($(".navbar").width() > 767) {
+        $("#zoom_img").elevateZoom({ 
+            zoomWindowFadeIn: 500,
+            zoomWindowFadeOut: 500,
+            zoomWindowWidth:500, 
+            zoomWindowHeight:500,
+            lensFadeIn: 500,
+            lensFadeOut: 500 
+        });
+    }
     //]]>
 </script>
