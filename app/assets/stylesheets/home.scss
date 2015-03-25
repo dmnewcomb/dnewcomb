@@ -131,7 +131,7 @@ body {
     }
     
     .navbar-toggle {
-        margin-right: 35px !important;
+        margin-right: 40px !important;
     }
     .icon-bar {
         background-color: $primary-body-color;
@@ -381,6 +381,13 @@ a {
     display: block;
     margin: 10px auto;
     border-radius: 15px;
+}
+
+@media(max-width: 550px) {
+    .zoom {
+        width: 250px;
+        height: 250px;    
+    }
 }
 
 #drop-container {

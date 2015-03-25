@@ -42,10 +42,8 @@
                     $("#zoom_img").elevateZoom({ 
                         zoomWindowFadeIn: 500,
                         zoomWindowFadeOut: 500,
-                        zoomWindowWidth:500, 
-                        zoomWindowHeight:500,
-                        lensFadeIn: 500,
-                        lensFadeOut: 500 
+                        zoomWindowWidth: 250, 
+                        zoomWindowHeight: 250
                     });
                 }
                 return;
@@ -59,7 +57,6 @@
     }
     
     Search.prototype.createImage = function(imageName) {
-        console.log(imageName);
         if(imageName === "Dallas Mavericks.png") {
             $('#test-container').html("<%= escape_javascript(image_tag 'Dallas Mavericks.png', class: 'zoom',id: 'zoom_img') %>");    
         } else if(imageName === "Denver Nuggets.png") {
