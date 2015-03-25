@@ -17,7 +17,6 @@ class HomeController < ApplicationController
     
     def switch
         query = params[:query].to_s
-        puts query
 		resultHTML = "/assets/" + query + ".png"
 		render :text => resultHTML    
     end
