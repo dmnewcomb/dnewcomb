@@ -10,7 +10,6 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
  Rails.application.config.assets.precompile += %w( dnewcomb.js )
  Rails.application.config.assets.precompile += %w( jquery.easing.min.js )
- Rails.application.config.assets.precompile += %w( search.js )
  Rails.application.config.assets.precompile += %w( select.js )
  Rails.application.config.assets.precompile += %w( progress.js )
  Rails.application.config.assets.precompile += %w( zoom.min.js )

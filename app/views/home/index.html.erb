@@ -205,17 +205,4 @@
     <div class="push-small"></div>
 </div>
 
-<script type="text/javascript">
-    //<![CDATA[
-    if($(".navbar").width() > 767) {
-        $("#zoom_img").elevateZoom({ 
-            zoomWindowFadeIn: 500,
-            zoomWindowFadeOut: 500,
-            zoomWindowWidth:500, 
-            zoomWindowHeight:500,
-            lensFadeIn: 500,
-            lensFadeOut: 500 
-        });
-    }
-    //]]>
-</script>
+<%= render(:partial => "dynamic") %>  

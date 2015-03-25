@@ -1,0 +1,81 @@
+<script type="text/javascript">
+    //<![CDATA[
+    if($(".navbar").width() > 767) {
+        $("#zoom_img").elevateZoom({ 
+            zoomWindowFadeIn: 500,
+            zoomWindowFadeOut: 500,
+            zoomWindowWidth:250, 
+            zoomWindowHeight:250,
+        });
+    }
+    
+    function Search(dropID, imageID, containerID, method, url) {
+        var obj = this;
+        this.dropMenu = document.getElementById(dropID);
+        this.image = document.getElementById(imageID);
+        this.container = document.getElementById(containerID);
+        this.method = method;
+        this.url = url;
+        this.dropMenu.onchange = function(event) {
+            obj.chosenText = obj.dropMenu.options[obj.dropMenu.selectedIndex].text;
+            obj.performSearch(event);
+        }
+    }
+
+    Search.prototype.performSearch = function(event) {
+        var obj = this;
+        var myXHR = new XMLHttpRequest();
+
+        myXHR.onreadystatechange = function() {
+            if(this.readyState === 1) {
+                NProgress.start(); 
+            }
+            if(this.readyState == 4) {
+                obj.container.removeChild(obj.image);
+                obj.createImage(this.responseText);
+                var newImage = document.getElementById("zoom_img");
+                newImage.onload = function(event) {
+                    NProgress.done();  
+                }
+                obj.image = newImage;
+                if($(".navbar").width() > 767) {
+                    $("#zoom_img").elevateZoom({ 
+                        zoomWindowFadeIn: 500,
+                        zoomWindowFadeOut: 500,
+                        zoomWindowWidth:500, 
+                        zoomWindowHeight:500,
+                        lensFadeIn: 500,
+                        lensFadeOut: 500 
+                    });
+                }
+                return;
+            }
+            if(this.status != 200) {
+                return;
+            }
+        }
+        myXHR.open(obj.method, obj.url+encodeURIComponent(obj.chosenText), true);
+        myXHR.send();
+    }
+    
+    Search.prototype.createImage = function(imageName) {
+        console.log(imageName);
+        if(imageName === "Dallas Mavericks.png") {
+            $('#test-container').html("<%= escape_javascript(image_tag 'Dallas Mavericks.png', class: 'zoom',id: 'zoom_img') %>");    
+        } else if(imageName === "Denver Nuggets.png") {
+            $('#test-container').html("<%= escape_javascript(image_tag 'Denver Nuggets.png', class: 'zoom',id: 'zoom_img') %>");  
+        }else if(imageName === "Houston Rockets.png") {
+            $('#test-container').html("<%= escape_javascript(image_tag 'Houston Rockets.png', class: 'zoom',id: 'zoom_img') %>");  
+        }else if(imageName === "Memphis Grizzlies.png") {
+            $('#test-container').html("<%= escape_javascript(image_tag 'Memphis Grizzlies.png', class: 'zoom',id: 'zoom_img') %>");  
+        }else if(imageName === "Minnesota Timberwolves.png") {
+            $('#test-container').html("<%= escape_javascript(image_tag 'Minnesota Timberwolves.png', class: 'zoom',id: 'zoom_img') %>");  
+        }else if(imageName === "San Antonio Spurs.png") {
+            $('#test-container').html("<%= escape_javascript(image_tag 'San Antonio Spurs.png', class: 'zoom',id: 'zoom_img') %>");  
+        }else if(imageName === "Utah Jazz.png") {
+            $('#test-container').html("<%= escape_javascript(image_tag 'Utah Jazz.png', class: 'zoom',id: 'zoom_img') %>");  
+        }
+    }
+    var s = new Search("drop", "zoom_img", "test-container", "GET", "/home/switch?query=");
+    //]]>
+</script>
