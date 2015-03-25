@@ -36,14 +36,8 @@ Rails.application.configure do
   config.assets.digest = true
     
   # Disable Rails's static asset server (Apache or nginx will already do this).
+  config.serve_static_files = true
   config.serve_static_assets = true
-
-
-  # Generate digests for assets URLs.
-  config.assets.digest = true
-
-  config.assets.enabled = true
-  config.assets.precompile += %w( *.scss *.js)
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 

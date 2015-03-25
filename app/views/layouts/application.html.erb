@@ -24,32 +24,12 @@
   	    <!-- Latest compiled and minified Bootstrap CSS -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         
-        <!-- Easing JQuery Plugin JavaScript -->
-        <script type="text/javascript" src="/assets/jquery.easing.min.js?body=1"></script>
+        <!-- Easing JQuery Plugin, dnewcomb, search, select, progress, zoom JavaScripts -->
+        <%= javascript_include_tag "jquery.easing.min", "dnewcomb", "search", "select" %>
+        <%= javascript_include_tag "progress", "zoom.min" %>
         
-        <!-- dnewcomb JavaScript -->
-        <script type="text/javascript" src="/assets/dnewcomb.js?body=1"></script>
-        
-        <!-- Search JavaScript -->
-        <script type="text/javascript" src="/assets/search.js?body=1"></script>
-        
-        <!-- Select JavaScript -->
-        <script type="text/javascript" src="/assets/select.js?body=1"></script>
-        
-        <!-- Progress JavaScript -->
-        <script type="text/javascript" src="/assets/progress.js?body=1"></script>
-        
-        <!-- Zoom attributes -->
-        <script type="text/javascript" src="/assets/zoom.min.js?body=1"></script>
-        
-        <!-- Animate CSS -->
-        <script type="text/css" src="/assets/animate.css?body=1"></script>
-        
-        <!-- Select CSS -->
-        <script type="text/css" src="/assets/select.min.css?body=1"></script>
-        
-        <!-- Progress CSS -->
-        <script type="text/css" src="/assets/progress.css?body=1"></script>
+        <!-- animate , select, and progress CSS -->
+        <%= stylesheet_link_tag "animate", "select", "progress" %>
         
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

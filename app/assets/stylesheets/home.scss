@@ -195,9 +195,6 @@ body {
     height: $profile-picture-size;
     border-radius: $profile-picture-size / 2;
     border: 1px solid $primary-body-color;
-    background-size: cover;
-    background-image: url("profile.jpg");
-    background-repeat: no-repeat;
 }
 
 .line-separator {
@@ -210,25 +207,21 @@ body {
 
 .top-background-image {
     @extend .top-background-image;
-    background-image: url("basketball.jpg");
 }
 
 .second-background-image {
     @extend .top-background-image;
-    background-image: url("forest.jpg");
     opacity: 0.5;
 }
 
 .third-background-image {
     @extend .top-background-image;
-    background-image: url("ocean.jpg");
     background-position: 70%;
     opacity: 0.5;
 }
 
 .fourth-background-image {
     @extend .top-background-image;
-    background-image: url("climb-long.jpg");
     background-position: 70%;
     opacity: 0.5;
 }
@@ -310,17 +303,13 @@ body {
     margin: 10px auto;
     width: 64px;
     height: 64px;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #linkedin {
-    background-image: url("linkedin.png");
     display: inherit;
 }
 
-#linkedin-secondary-color {
-    background-image: url("linkedin-highlighted.png");
+#l-secondary-color {
     display: none;
 }
 
@@ -335,18 +324,16 @@ body {
     a:hover #linkedin {
         display: none;
     }
-    a:hover #linkedin-secondary-color {
+    a:hover #l-secondary-color {
         display: inherit;
     }
 }
 
 #resume {
-    background-image: url("file.png");
     display: inherit;
 }
 
-#resume-secondary-color {
-    background-image: url("file-highlighted.png");
+#r-secondary-color {
     display: none;
 }
 
@@ -362,7 +349,7 @@ body {
         display: none;
     }
     
-    a:hover #resume-secondary-color {
+    a:hover #r-secondary-color {
         display: inherit;
     }
 }
