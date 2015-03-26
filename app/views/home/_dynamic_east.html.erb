@@ -1,0 +1,98 @@
+<script type="text/javascript">
+    //<![CDATA[
+    if($(".navbar").width() > 767) {
+        $("#zoom_img_e").elevateZoom({ 
+            zoomWindowPosition: 1,
+            zoomWindowOffetx: -250,
+            zoomWindowFadeIn: 500,
+            zoomWindowFadeOut: 500,
+            zoomWindowWidth:250, 
+            zoomWindowHeight:250,
+        });
+    }
+    
+    function SearchEast(dropID, imageID, containerID, method, url) {
+        var obj = this;
+        this.dropMenu = document.getElementById(dropID);
+        this.image = document.getElementById(imageID);
+        this.container = document.getElementById(containerID);
+        this.method = method;
+        this.url = url;
+        this.dropMenu.onchange = function(event) {
+            obj.chosenText = obj.dropMenu.options[obj.dropMenu.selectedIndex].text;
+            obj.performSearch(event);
+        }
+    }
+
+    SearchEast.prototype.performSearch = function(event) {
+        var obj = this;
+        var myXHR = new XMLHttpRequest();
+
+        myXHR.onreadystatechange = function() {
+            if(this.readyState === 1) {
+                NProgress.start(); 
+            }
+            if(this.readyState == 4) {
+                obj.container.removeChild(obj.image);
+                obj.createImage(this.responseText);
+                var newImage = document.getElementById("zoom_img_e");
+                newImage.onload = function(event) {
+                    NProgress.done();  
+                }
+                obj.image = newImage;
+                if($(".navbar").width() > 767) {
+                    $("#zoom_img_e").elevateZoom({ 
+                        zoomWindowPosition: 1,
+                        zoomWindowOffetx: -250,
+                        zoomWindowFadeIn: 500,
+                        zoomWindowFadeOut: 500,
+                        zoomWindowWidth: 250, 
+                        zoomWindowHeight: 250
+                    });
+                }
+                return;
+            }
+            if(this.status != 200) {
+                return;
+            }
+        }
+        myXHR.open(obj.method, obj.url+encodeURIComponent(obj.chosenText), true);
+        myXHR.send();
+    }
+    
+    SearchEast.prototype.createImage = function(imageName) {
+        if(imageName === "Toronto Raptors.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Toronto Raptors.png', class: 'zoom',id: 'zoom_img_e') %>");    
+        } else if(imageName === "Boston Celtics.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Boston Celtics.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Brooklyn Nets.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Brooklyn Nets.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Philadelphia 76ers.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Philadelphia 76ers.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "New York Knicks.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'New York Knicks.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Cleveland Cavaliers.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Cleveland Cavaliers.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Chicago Bulls.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Chicago Bulls.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Milawaukee Bucks.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Milawaukee Bucks.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Indiana Pacers.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Indiana Pacers.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Detroit Pistons.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Detroit Pistons.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Atlanta Hawks.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Atlanta Hawks.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Washington Wizards.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Washington Wizards.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Miami Heat.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Miami Heat.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Charlotte Bobcats.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Charlotte Bobcats.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }else if(imageName === "Orlando Magic.png") {
+            $('#test-container_e').html("<%= escape_javascript(image_tag 'Orlando Magic.png', class: 'zoom',id: 'zoom_img_e') %>");  
+        }
+    }
+    var se = new SearchEast("drop_e", "zoom_img_e", "test-container_e", "GET", "/home/switch?query=");
+    //]]>
+</script>

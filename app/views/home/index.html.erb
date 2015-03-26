@@ -169,8 +169,14 @@
     <h2 class="text-centered">Projects</h2>
     <h3>NBA Playoff Predictions</h3>
     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam at laoreet arcu. Fusce eu tortor ut ante efficitur hendrerit at vel felis. Etiam ut eleifend urna. Morbi venenatis porttitor mattis. Morbi non lectus et tortor tempor laoreet. Sed blandit mauris at lectus sagittis, et iaculis quam vulputate. Nulla cursus nisi congue augue eleifend, quis venenatis leo efficitur.</p>
-    
-    <%= render(:partial => "drop") %>    
+    <div class="row">
+        <div class="col-lg-6">
+            <%= render(:partial => "drop_west") %>    
+        </div>
+        <div class="col-lg-6">
+            <%= render(:partial => "drop_east") %>    
+        </div>
+    </div>
 </div>
 <div class="push-large"></div>
 <div class="push-large"></div>
@@ -204,5 +210,3 @@
     </div>
     <div class="push-small"></div>
 </div>
-
-<%= render(:partial => "dynamic") %>  

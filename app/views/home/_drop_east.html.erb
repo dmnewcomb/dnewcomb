@@ -1,0 +1,41 @@
+<div class="team-img-container">
+    <h3 class="text-centered">Eastern Conference</h3>
+    <div id="drop-container_e">
+        <select id="drop_e" data-live-search="true">
+            <optgroup label="Atlantic Division">
+                <option>Toronto Raptors</option>
+                <option>Boston Celtics</option>
+                <option>Brooklyn Nets</option>
+                <option>Philadelphia 76ers</option>
+                <option>New York Knicks</option>
+            </optgroup>
+            
+            <optgroup label="Central Division">
+                <option>Cleveland Cavaliers</option>
+                <option>Chicago Bulls</option>
+                <option>Milawaukee Bucks</option>
+                <option>Indiana Pacers</option>
+                <option>Detroit Pistons</option>
+            </optgroup>
+            
+            <optgroup label="Southeast Division">
+                <option>Atlanta Hawks</option>
+                <option>Washington Wizards</option>
+                <option>Miami Heat</option>
+                <option>Charlotte Bobcats</option>
+                <option>Orlando Magic</option>
+            </optgroup>
+        </select>
+    </div>
+    <div id="test-container_e">
+        <%= image_tag "Toronto Raptors.png", class: "zoom", id: "zoom_img_e" %>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+        $('#drop_e').selectpicker('refresh');
+    //]]>
+</script>
+
+<%= render(:partial => "dynamic_east") %>  
