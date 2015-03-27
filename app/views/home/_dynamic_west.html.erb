@@ -18,8 +18,8 @@
         this.container = document.getElementById(containerID);
         this.method = method;
         this.url = url;
+        
         this.dropMenu.onchange = function(event) {
-            console.log("West changing");
             obj.chosenText = obj.dropMenu.options[obj.dropMenu.selectedIndex].text;
             obj.performSearch(event);
         }
@@ -33,7 +33,7 @@
             if(this.readyState === 1) {
                 NProgress.start(); 
             }
-            if(this.readyState == 4) {
+            if(this.readyState === 4) {
                 obj.container.removeChild(obj.image);
                 obj.createImage(this.responseText);
                 var newImageWest = document.getElementById("zoom_img_w");
@@ -61,38 +61,13 @@
         myXHR.send();
     }
     
-    SearchWest.prototype.createImage = function(imageName) {
-        if(imageName === "Dallas Mavericks.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Dallas Mavericks.png', class: 'zoom',id: 'zoom_img_w') %>");    
-        } else if(imageName === "Denver Nuggets.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Denver Nuggets.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "Houston Rockets.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Houston Rockets.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "Memphis Grizzlies.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Memphis Grizzlies.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "Minnesota Timberwolves.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Minnesota Timberwolves.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "San Antonio Spurs.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'San Antonio Spurs.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "Utah Jazz.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Utah Jazz.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "New Orleans Pelicans.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'New Orleans Pelicans.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "Portland Trail Blazers.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Portland Trail Blazers.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "Oklahoma City Thunder.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Oklahoma City Thunder.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "Golden State Warriors.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Golden State Warriors.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "Los Angeles Clippers.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Los Angeles Clippers.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "Los Angeles Lakers.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Los Angeles Lakers.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "Phoenix Suns.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Phoenix Suns.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }else if(imageName === "Sacramento Kings.png") {
-            $('#test-container_w').html("<%= escape_javascript(image_tag 'Sacramento Kings.png', class: 'zoom',id: 'zoom_img_w') %>");  
-        }
+    SearchWest.prototype.createImage = function(path) {
+        var obj = this;
+        var teamPath = document.createElement("img");
+        teamPath.id = "zoom_img_w";
+        teamPath.className = "zoom";
+        teamPath.setAttribute('src', path);
+        obj.container.appendChild(teamPath);   
     }
     var sw = new SearchWest("drop_w", "zoom_img_w", "test-container_w", "GET", "/home/switch?query=");
     //]]>

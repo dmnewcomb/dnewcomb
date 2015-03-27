@@ -9,11 +9,11 @@ $highlight-font-color: #891414 !important;
 $highlight-color-non-important: #891414;
 $primary-background-color: #f0f0f0 !important;
 $base-font-size: 12px;
-$large-font-size: 3.5em;
-$header-height: 100px;
-$brand-size: 100px;
+$large-font-size: 2.5em;
+$header-height: 60px;
+$brand-size: 60px;
 $profile-picture-size: 200px;
-$important-z-index: 1000;
+$important-z-index: 100;
 $max-separator-width: 600px;
 
 body {
@@ -76,6 +76,9 @@ body {
     
     .navbar-nav:hover {
         cursor: pointer;
+    }
+    
+    .menu-tab-last {
         border-right: 1px solid $highlight-color-non-important;
     }
     
@@ -85,10 +88,14 @@ body {
     }
     
     .menu-tab {
+        min-width: 125px;
         margin: 0px -1px;
         display: none;
         background-color: $primary-background-color;
-        padding: ($header-height - 2)/4;
+        padding-top: ($header-height)/12;
+        padding-left: ($header-height)/6;
+        padding-right: ($header-height)/6;
+        padding-bottom: ($header-height)/12 - 1;
         border-bottom: 1px solid $highlight-color-non-important;
     }
     
@@ -104,6 +111,7 @@ body {
         -moz-transition: color, ease-in 0.5s;
         -o-transition: color, ease-in 0.5s;
         transition: color, ease-in 0.5s;
+        text-align: center;
     }
     
     .menu-tab > a:hover {
@@ -118,10 +126,8 @@ body {
     }
     
     .brand {
-        width: $brand-size / 2 !important;
-        height: $brand-size / 2 !important;
-        font-size:  $large-font-size / 2  !important;
-        line-height: $brand-size / 2 !important;
+        height: $brand-size - 10 !important;
+        line-height: $brand-size - 10 !important;
         margin-left: 15px;
         border: 0px !important;
     }
@@ -133,6 +139,7 @@ body {
     .navbar-toggle {
         margin-right: 40px !important;
     }
+    
     .icon-bar {
         background-color: $primary-body-color;
     }
@@ -145,6 +152,10 @@ body {
         display: block !important;    
         padding: 0px !important;
         border-bottom: 0px !important;
+    }
+    
+    .menu-tab-last {
+        border-right: 0px !important;  
     }
     
     .navbar {
@@ -211,19 +222,19 @@ body {
 
 .second-background-image {
     @extend .top-background-image;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .third-background-image {
     @extend .top-background-image;
     background-position: 70%;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .fourth-background-image {
     @extend .top-background-image;
     background-position: 70%;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .fifth-background {
@@ -383,16 +394,22 @@ a {
     border-radius: 15px;
 }
 
-@media(max-width: 550px) {
+@media(max-width: 580px) {
     .zoom {
         width: 250px;
         height: 250px;    
+    }
+    
+    .zoomContainer {
+        width: 250px !important;
+        height: 250px !important;        
     }
 }
 
 #drop-container_w, #drop-container_e {
     width: 220px;
     margin: 10px auto;
+    z-index: $important-z-index * 10 !important;
 }
 
 .team-img-container {

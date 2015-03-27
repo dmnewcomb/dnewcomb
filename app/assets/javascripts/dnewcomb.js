@@ -1,8 +1,3 @@
-/*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 // jQuery to collapse the navbar on scroll
 var check = true;
 $(window).scroll(function() {
@@ -63,4 +58,36 @@ $(document).ready(function() {
     $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
     });
+});
+
+// Removes/Adds zoom ability at 600px
+var widthCheck = false;
+$(window).resize(function() {
+    if(widthCheck === false) {
+        if($(window).width() < 600) {
+            $('.zoomContainer').remove();// remove zoom container from DOM
+            widthCheck = true;
+        }
+    }
+    if(widthCheck === true) {
+        if($(window).width() > 600) {
+            $("#zoom_img_w").elevateZoom({ 
+                zoomWindowPosition: 1,
+                zoomWindowOffetx: -250,
+                zoomWindowFadeIn: 500,
+                zoomWindowFadeOut: 500,
+                zoomWindowWidth: 250, 
+                zoomWindowHeight: 250,
+            });
+            $("#zoom_img_e").elevateZoom({ 
+                zoomWindowPosition: 1,
+                zoomWindowOffetx: -250,
+                zoomWindowFadeIn: 500,
+                zoomWindowFadeOut: 500,
+                zoomWindowWidth:250, 
+                zoomWindowHeight:250,
+            });
+            widthCheck = false;
+        }
+    }
 });

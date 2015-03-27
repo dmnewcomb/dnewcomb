@@ -60,6 +60,7 @@
         myXHR.send();
     }
     
+<<<<<<< HEAD
     SearchEast.prototype.createImage = function(imageName) {
         if(imageName === "Toronto Raptors.png") {
             $('#test-container_e').html("<%= escape_javascript(image_tag 'Toronto Raptors.png', class: 'zoom',id: 'zoom_img_e') %>");    
@@ -92,6 +93,15 @@
         }else if(imageName === "Orlando Magic.png") {
             $('#test-container_e').html("<%= escape_javascript(image_tag 'Orlando Magic.png', class: 'zoom',id: 'zoom_img_e') %>");  
         }
+=======
+    SearchEast.prototype.createImage = function(path) {
+        var obj = this;
+        var newTeamPath = document.createElement("img");
+        newTeamPath.id = "zoom_img_e";
+        newTeamPath.className = "zoom";
+        newTeamPath.setAttribute('src', path);
+        obj.container.appendChild(newTeamPath);   
+>>>>>>> John-Branch
     }
     var se = new SearchEast("drop_e", "zoom_img_e", "test-container_e", "GET", "/home/switch?query=");
     //]]>
