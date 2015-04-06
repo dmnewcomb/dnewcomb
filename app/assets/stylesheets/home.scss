@@ -365,6 +365,30 @@ body {
     }
 }
 
+#instagram {
+    display: inherit;
+}
+
+#i-secondary-color {
+    display: none;
+}
+
+.instagram-container {
+    a {
+        display: block;
+        background-color: transparent !important;
+        width: 100%;
+        height: 100%;
+    }
+    
+    a:hover #instagram {
+        display: none;
+    }
+    a:hover #i-secondary-color {
+        display: inherit;
+    }
+}
+
 .company-logo {
     margin: 10px auto;
     display: block;
