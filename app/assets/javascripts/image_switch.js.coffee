@@ -7,11 +7,11 @@ class @ImageSwitch
 
         @switchImage()
 
-    createImage: (url) ->
+    createImage: (image_url) ->
         new_image = document.createElement("img")
         new_image.id = @image_id
         new_image.className = "zoom"
-        new_image.setAttribute('src', url)
+        new_image.setAttribute('src', image_url)
         @container[0].appendChild(new_image)
 
 
@@ -27,7 +27,8 @@ class @ImageSwitch
 
                 success: (response) =>
                     @container[0].removeChild(@image[0])
-                    @createImage(response)
+                    image_url = response
+                    @createImage(image_url)
                     new_image = $("##{@image_id}")
                     @image = new_image
                     @zoom.addZoom()
