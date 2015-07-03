@@ -1,0 +1,21 @@
+<header>
+	<nav class="navbar navbar-fixed-top top-nav-collapse" id="nav-bar-container">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			  <div class="brand">DN</div>
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#toggle-target">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			</div>
+
+			<div class="collapse navbar-collapse animate" id="toggle-target">
+				<ul class="nav navbar-nav">
+					<%= render(:partial => "/layouts/header_links")%> 
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
