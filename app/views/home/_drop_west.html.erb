@@ -2,40 +2,30 @@
     <h3 class="text-centered">Western Conference</h3>
     <div id="drop-container_w">
         <select id="drop_w" data-live-search="true">
-            <optgroup label="Atlantic Division">
-                <option>Dallas Mavericks</option>
-                <option>Houston Rockets</option>
-                <option>Memphis Grizzlies</option>
-                <option>San Antonio Spurs</option>
-                <option>New Orleans Pelicans</option>
-            </optgroup>
-            
-            <optgroup label="Central Division">
-                <option>Portland Trail Blazers</option>
-                <option>Oklahoma City Thunder</option>
-                <option>Utah Jazz</option>
-                <option>Denver Nuggets</option>
-                <option>Minnesota Timberwolves</option>
-            </optgroup>
-            
-            <optgroup label="Southeast Division">
-                <option>Golden State Warriors</option>
-                <option>Los Angeles Clippers</option>
-                <option>Los Angeles Lakers</option>
-                <option>Phoenix Suns</option>
-                <option>Sacramento Kings</option>
-            </optgroup>
+            <option>Dallas Mavericks</option>
+            <option>Houston Rockets</option>
+            <option>Memphis Grizzlies</option>
+            <option>San Antonio Spurs</option>
+            <option>New Orleans Pelicans</option>
+
+            <option data-divider="true"></option>
+
+            <option>Portland Trail Blazers</option>
+            <option>Oklahoma City Thunder</option>
+            <option>Utah Jazz</option>
+            <option>Denver Nuggets</option>
+            <option>Minnesota Timberwolves</option>
+
+            <option data-divider="true"></option>
+
+            <option>Golden State Warriors</option>
+            <option>Los Angeles Clippers</option>
+            <option>Los Angeles Lakers</option>
+            <option>Phoenix Suns</option>
+            <option>Sacramento Kings</option>
         </select>
     </div>
-    <div id="test-container_w">
+    <div id="container_w">
         <%= image_tag "Dallas Mavericks.png", class: "zoom", id: "zoom_img_w" %>
     </div>
 </div>
-
-<script type="text/javascript">
-    //<![CDATA[
-        $('#drop_w').selectpicker('refresh');
-    //]]>
-</script>
-
-<%= render(:partial => "dynamic_west") %>  
