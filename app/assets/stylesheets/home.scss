@@ -23,8 +23,8 @@ body {
 }
 
 @media(min-width: 767px) {
-    .top-nav-collapse #dirk {
-        .menu-tab {
+    .top-nav-collapse #toggle-target {
+        .menu-tab, .menu-tab-last {
             display: inline;    
         }
 
@@ -64,7 +64,7 @@ body {
     }
 }
 
-#dirk {
+#toggle-target {
     .brand {
         border-right: 1px solid $highlight-color-non-important;
     }
@@ -78,16 +78,14 @@ body {
         cursor: pointer;
     }
     
-    .menu-tab-last {
-        border-right: 1px solid $highlight-color-non-important;
+    .navbar-nav:hover {
+		.menu-tab, .menu-tab-last {
+			cursor: pointer;
+			display: inline;
+		}
     }
     
-    .navbar-nav:hover .menu-tab {
-        cursor: pointer;
-        display: inline;
-    }
-    
-    .menu-tab {
+    .menu-tab, .menu-tab-last {
         min-width: 125px;
         margin: 0px -1px;
         display: none;
@@ -97,26 +95,29 @@ body {
         padding-right: ($header-height)/6;
         padding-bottom: ($header-height)/12 - 1;
         border-bottom: 1px solid $highlight-color-non-important;
+		
+		a {
+			color: $primary-body-color;
+			-webkit-transition: color, ease-in 0.5s;
+			-moz-transition: color, ease-in 0.5s;
+			-o-transition: color, ease-in 0.5s;
+			transition: color, ease-in 0.5s;
+			text-align: center;
+		}
+		
+		a:hover {
+			color: $highlight-font-color;
+       		background-color: inherit !important;
+		}
     }
     
-    
-    .return-top {
+	.menu-tab-last {
+    	border-right: 1px solid $highlight-color-non-important;
+    }
+	
+	.return-top {
         height: 100%;
         background-color: transparent; 
-    }
-    
-    .menu-tab > a {
-        color: $primary-body-color;
-        -webkit-transition: color, ease-in 0.5s;
-        -moz-transition: color, ease-in 0.5s;
-        -o-transition: color, ease-in 0.5s;
-        transition: color, ease-in 0.5s;
-        text-align: center;
-    }
-    
-    .menu-tab > a:hover {
-        color: $highlight-font-color;
-        background-color: inherit !important;
     }
 }
 
@@ -132,7 +133,7 @@ body {
         border: 0px !important;
     }
     
-    .menu-tab {
+    .menu-tab, .menu-tab-last {
         border-bottom: 0px !important;
     }
     
@@ -148,7 +149,7 @@ body {
         display: none !important;
     }
     
-    .menu-tab {
+    .menu-tab, .menu-tab-last {
         display: block !important;    
         padding: 0px !important;
         border-bottom: 0px !important;
@@ -171,8 +172,10 @@ body {
         border-right: 0px !important;
     }
     
-    .menu-tab > a {
-        text-align: center;
+    .menu-tab, .menu-tab-last {
+		a {
+        	text-align: center;
+		}
     }
     
     #top {
@@ -298,10 +301,16 @@ body {
     background-color: white;
     border: 1px solid white;
     padding: 20px;
+	display: block;
 }
 
 .class-container:hover {
-    border: 1px solid $highlight-font-color;
+    border: 1px solid $highlight-font-color;	
+	text-decoration: none;
+}
+
+.class-title {
+	margin-top: 10px;
 }
 
 .class-description {
@@ -415,7 +424,6 @@ a {
     height: 500px;
     display: block;
     margin: 10px auto;
-    border-radius: 15px;
 }
 
 @media(max-width: 580px) {
