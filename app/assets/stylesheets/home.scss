@@ -8,6 +8,7 @@ $secondary-body-color: #525252 !important;
 $highlight-font-color: #891414 !important;
 $highlight-color-non-important: #891414;
 $primary-background-color: #e0e0e0 !important;
+$secondary-background-color: #7f7f7f;
 $base-font-size: 12px;
 $large-font-size: 2.5em;
 $header-height: 60px;
@@ -202,6 +203,14 @@ body {
     height: 500px;
 }
 
+.tsp-picture {
+    display: block;
+    margin: 10px auto;
+    width: 510px;
+    height: 680px;
+    border: 10px solid $secondary-background-color;
+}
+
 .profile-picture {
     display: block;
     margin: 10px auto;
@@ -225,25 +234,25 @@ body {
 
 .second-background-image {
     @extend .top-background-image;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .third-background-image {
     @extend .top-background-image;
     background-position: 70%;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .fourth-background-image {
     @extend .top-background-image;
     background-position: 70%;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
-.fifth-background {
-    width: 100%;
-    background-color: white;
-    min-height: 200px;
+.fifth-background-image {
+    @extend .top-background-image;
+    background-position: 70%;
+    opacity: 0.8;
 }
 
 .remaining {
