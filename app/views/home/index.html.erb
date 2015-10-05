@@ -108,12 +108,16 @@
     <p>The visualizations shown below grew out of the difficult personal experience of tightly budgeting a long backpacking trip through Europe.  To save money, it seemed advantageous to travel in the manner of a greedy algorithm optimizing for by distance (i.e. going to the first closest destination, then all successively closest destinations).  The logic assumes that to minimize the distance is also to minimize the overall travel cost.  In reality, however, there are several factors which could confound this assumption: promotional travel deals, seasonal price variations, and unusual transportation routes, amongst others. <br><br>A brief look into the problem area showed me that I'd come across a variation of the Traveling Salesman Problem (TSP).  The problem asks, "Given a list of cities and distances between them, what is the shortest way for a salesman to visit each city exactly once and return to the original city?" My version simply replaces "distance" by "cost to visit" and is a mathematically identical formulation.  Therefore, I gathered travel cost data between the 21 cities I planned to visit, and began to solve the problem.  I used two basic optimization approaches: a greedy algorithm and the 2-Opt algorithm. <br><br><p class="tab"><i><b>Greedy Algorithm:</i></b>  This optimization procedure simply took my city of origin, Paris, and initially went to the cheapest place, Brussels.  Then, it successively went on the cheapest trip to the next city, ending with a trip that would cost 1676€.  This was a decent start, but the nature of the greedy algorithm is myopic and ends at a local minimum with no guarantee of having found the optimal solution.  This led me to 2-Opt.<br><br><i><b>2-Opt:</i></b>  The 2-Opt solution to the TSP aims to fix the narrow sight of the greedy algorithm by doing a corrective survey of the initial greedy groundowrk.  Visually, any two paths that would cross each other in the greedy solution get uncrossed and if they result in a cost improvement, the swap is kept.  Therefore, a functional 2-Opt solution can only improve upon the local minimum found by the greedy algorithm.</p><br>The slopegraphs found below show a bit of the work I put into creating a useful visualization of different possible paths through Europe.  The slopegraph on the left aims to show that the shortest path through these 21 European cities, as found by the 2-Opt algorithm minimizing distance, is a much more expensive option than the cheapest path, as found by 2-Opt algorithm minimizing cost.  On the right hand side, the slopegraph demonstrates that the greedy algorithm's path, while somewhat effective, also does not result in the cheapest path. Instead, it can and should be tweaked to save some money.  For a traveler on a tight budget, finding even these small savings can make all the difference on a trip.</p>
     <div class="push-small"></div>
     <div class="row">
+        <div id="tsp-img-container">
         <div class="col-lg-6">
             <%= image_tag "travel_cost_slopegraph_2.png", class: "tsp-picture" %>   
         </div>
+    </div>
+        <div id="tsp-img-container">
         <div class="col-lg-6">
            <%= image_tag "travel_cost_slopegraph_1.png", class: "tsp-picture" %> 
         </div>
+    </div>
     </div>
 
 </div>

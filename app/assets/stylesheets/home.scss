@@ -204,11 +204,18 @@ body {
 }
 
 .tsp-picture {
+    width: 510px;
+    height: auto;
+    max-width: 100%;
     display: block;
     margin: 10px auto;
-    width: 510px;
-    height: 680px;
     border: 10px solid $secondary-background-color;
+}
+
+.tsp-img-container {
+    color: $highlight-color-non-important;
+    background-color: white;
+    padding: 15px;
 }
 
 .profile-picture {
