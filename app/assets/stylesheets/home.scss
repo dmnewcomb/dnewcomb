@@ -218,6 +218,22 @@ body {
     padding: 15px;
 }
 
+
+.poem-picture {
+    width: 550px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 10px auto;
+    border: 10px solid $secondary-background-color;
+}
+
+.poem-img-container {
+    color: $highlight-color-non-important;
+    background-color: white;
+    padding: 15px;
+}
+
 .profile-picture {
     display: block;
     margin: 10px auto;
@@ -260,6 +276,11 @@ body {
     @extend .top-background-image;
     background-position: 70%;
     opacity: 0.8;
+}
+
+.sixth-background-image {
+   @extend .top-background-image;
+   opacity: 1;
 }
 
 .remaining {

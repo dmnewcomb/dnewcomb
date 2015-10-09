@@ -129,6 +129,56 @@
 <div class="push-large"></div>
 
 <!-- Diagonal Separator -->
+<div class="remaining">
+    <div class="skew_appended"></div>
+</div>
+
+<!-- Sixth Image -->
+<%= image_tag "sunset.jpg", class: "sixth-background-image" %>
+
+<!-- Diagonal Separator -->
+<div class="remaining">
+    <div class="skew_prepend"></div>
+</div>
+
+<!-- Project II Section -->
+<div class="push-large"></div>
+<div class="container" id="projects">
+    <h2 class="text-centered">Poetry Analysis</h2>
+    <h3> LDA Algorithm </h3>
+    <p><br>This section dives into a textual analysis of a group of 48 personal poems which I am compiling into a book.  As I began to edit my poems, I began to wonder how exactly each of the words were related to each other.  I began to wonder if there were a discernible pattern that I could elicit with mathematics.  As it turns out, a common text analysis algorithm called Latent Dirichlet Allocation (LDA) can help determine relationships between words in a text.  <br><br> The LDA algorithm takes a body of text and splits it into however many topics (i.e. groups) that the user believes are structured in the text.  Analysis of LDA can give likelihoods of whether the model fit and the number of topics chosen actually represent the truth behind the data.  The visualizations below come from 12 poems each which I determined to have 23 topics.  The point in the center represents the word with the most connections to other words, and each line represents such a connection.
+    <div class="push-small"></div>
+    <div class="row">
+        <div id="poem-img-container">
+        <div class="col-lg-6">
+            <%= image_tag "poem_wheel_1.png", class: "poem-picture" %>   
+        </div>
+    </div>
+        <div id="poem-img-container">
+        <div class="col-lg-6">
+           <%= image_tag "poem_wheel_2.png", class: "poem-picture" %> 
+        </div>
+    </div>
+    </div>
+    <div class="push-small"></div>
+
+    <div class="row">
+        <div id="poem-img-container">
+        <div class="col-lg-6">
+            <%= image_tag "poem_wheel_3.png", class: "poem-picture" %>   
+        </div>
+    </div>
+        <div id="poem-img-container">
+        <div class="col-lg-6">
+           <%= image_tag "poem_wheel_4.png", class: "poem-picture" %> 
+        </div>
+    </div>
+    </div>
+
+</div>
+<div class="push-large"></div>
+
+<!-- Diagonal Separator -->
 <div class="fifth-background" id="contact">
     <div class="push-small"></div>
     <h2 class="text-centered">Contact Me</h2>
