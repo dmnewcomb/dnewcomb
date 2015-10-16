@@ -238,9 +238,11 @@ body {
 .tree-picture {
     width: 1100px;
     height: auto;
+    background-color: solid $secondary-background-color;
     max-width: 100%;
     display: block;
     margin: 10px auto;
+    background-color: white;
     padding: 15px;
     border: 10px solid $secondary-background-color;
 }
